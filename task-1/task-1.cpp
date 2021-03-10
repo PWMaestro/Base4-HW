@@ -5,24 +5,24 @@ using namespace std;
 
 int main()
 {
-    int m, m1, n, p, counter = 1;
+    int InitialMutants, nextDayMutants, dailyKilledMutants, reproductionPercentage, counter = 1;
 
     cout << "Number of mutants: ";
-    cin >> m;
+    cin >> InitialMutants;
     cout << "Persentage of reproduction: ";
-    cin >> p;
+    cin >> reproductionPercentage;
     cout << "Number of mutants killed by HMS: ";
-    cin >> n;
+    cin >> dailyKilledMutants;
 
-    m1 = trunc( m * ( 1 + (p / 100.0) ) ) - n;
+    nextDayMutants = trunc( InitialMutants * ( 1 + (reproductionPercentage / 100.0) ) ) - dailyKilledMutants;
 
-    if (m1 > m) {
+    if (nextDayMutants > InitialMutants) {
         cout << "Mutants will conquer the entire planet!";
-    } else if (m1 == m) {
+    } else if (nextDayMutants == InitialMutants) {
         cout << "The fight will last forever!";
     } else {
-        while (m1 > 0) {
-            m1 = trunc( m1 * ( 1 + ( p / 100 ) ) ) - n;
+        while (nextDayMutants > 0) {
+            nextDayMutants = trunc( nextDayMutants * ( 1 + (reproductionPercentage / 100.0) ) ) - dailyKilledMutants;
             counter++;
         }
         cout << "The fight will last " << counter << " days.";
