@@ -5,28 +5,28 @@ using namespace std;
 
 int main()
 {
-    int a = 0, b = 0;
+    int numberA = 0, numberB = 0;
 
     cout << "Enter first number: ";
-    cin >> a;
+    cin >> numberA;
     cout << "Enter second number: ";
-    cin >> b;
+    cin >> numberB;
 
-    if (a > 0 && b > 0) {
-        int c, max = a, min = b;
+    if (numberA > 0 && numberB > 0) {
+        int remainder, max = numberA, min = numberB;
 
-        if (b > a) {
-            max = b;
-            min = a;
+        if (numberB > numberA) {
+            max = numberB;
+            min = numberA;
         }
 
         do {
-            c = max % min;
+            remainder = max % min;
             max = min;
-            min = c;
-        } while (c > 0);
+            min = remainder;
+        } while (remainder > 0);
 
-        cout << "Least common deviser: " << a * b / max << endl;
+        cout << "Least common deviser: " << numberA * numberB / max << endl;
         
     } else {
         cout << "Error! Wrong number!";
