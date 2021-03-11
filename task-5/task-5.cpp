@@ -5,36 +5,36 @@ using namespace std;
 
 int main()
 {
-    int a, b, c;
+    int sideA, sideB, sideC;
 
     cout << "Enter the first side of triangle: ";
-    cin >> a;
+    cin >> sideA;
     cout << "Enter the second side of triangle: ";
-    cin >> b;
+    cin >> sideB;
     cout << "Enter the third side of triangle: ";
-    cin >> c;
+    cin >> sideC;
 
-    if (a <= 0 || b <= 0 || c <= 0) {
+    if (sideA <= 0 || sideB <= 0 || sideC <= 0) {
         cout << "Error! Wrong input!";
         return 1;
     }
 
-    int max = a;
+    int sideMax = sideA;
 
-    if (max < b) {
-        max = b;
+    if (sideMax < sideB) {
+        sideMax = sideB;
     }
-    if (max < c) {
-        max = c;
+    if (sideMax < sideC) {
+        sideMax = sideC;
     }
 
-    if (a == b && b == c) {
+    if (sideA == sideB && sideB == sideC) {
         cout << "Equilateral triangle" << endl;
-    } else if (a == b || b == c || a == c) {
+    } else if (sideA == sideB || sideB == sideC || sideA == sideC) {
         cout << "Isosceles triangle." << endl;
-    } else if ( ( a == max && ( pow(a, 2) == (pow(b, 2) + pow(c, 2)) )) or
-                ( b == max && ( pow(b, 2) == (pow(a, 2) + pow(c, 2)) )) or
-                ( c == max && ( pow(c, 2) == (pow(b, 2) + pow(a, 2)) )) ) {
+    } else if ( ( sideA == sideMax && ( pow(sideA, 2) == (pow(sideB, 2) + pow(sideC, 2)) )) or
+                ( sideB == sideMax && ( pow(sideB, 2) == (pow(sideA, 2) + pow(sideC, 2)) )) or
+                ( sideC == sideMax && ( pow(sideC, 2) == (pow(sideB, 2) + pow(sideA, 2)) )) ) {
         cout << "Right triangle." << endl;
     } else {
         cout << "General triangle." << endl;
