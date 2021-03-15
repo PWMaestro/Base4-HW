@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    int max, currentValue = 1;
+    double max, currentValue = 1.0;
 
     cout << "Enter a maximum number: ";
     cin >> max;
