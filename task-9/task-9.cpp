@@ -2,23 +2,30 @@
 
 using namespace std;
 
+double calculateNextRawMember(double currentRawMember);
+
 int main()
 {
-    double max, currentValue = 1.0;
+    double maxValue, currentValue = 1.0;
 
-    cout << "Enter a maximum number: ";
-    cin >> max;
+    cout << "Enter a maximum member: ";
+    cin >> maxValue;
 
-    if (max <= 0) {
+    if (maxValue <= 0) {
         cout << "Error! Incorrect input. The number must be greater than zero.";
         return 1;
     } else {
         cout << "Calculated numbers:" << endl;
         do {
             cout << currentValue << endl;
-            currentValue = 2 * currentValue + 1;
-        } while (currentValue <= max);   
+            currentValue = calculateNextRawMember(currentValue);
+        } while (currentValue <= maxValue);   
     }
 
     return 0;
+}
+
+double calculateNextRawMember(double currentRawMember)
+{
+    return currentRawMember * 2 + 1;
 }
