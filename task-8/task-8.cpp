@@ -3,45 +3,44 @@
 
 using namespace std;
 
-double positiveExponentiation(double, int);
-double negativeExponentiation(double, int);
+double positiveExponentiation(double number, int degree);
+double negativeExponentiation(double number, int degree);
 
 int main()
 {
     double number, result;
-    int degree;
+    int power;
 
     cout << "Enter a number: ";
     cin >> number;
-    cout << "Enter a degree: ";
-    cin >> degree;
+    cout << "Enter a power: ";
+    cin >> power;
 
-    if (degree == 0) {
+    if (power == 0) {
         cout << 1;
-    } else if (degree > 0) {
-        cout << positiveExponentiation(number, degree);
+    } else if (power > 0) {
+        cout << positiveExponentiation(number, power);
     } else {
-        cout << negativeExponentiation(number, degree);
+        cout << negativeExponentiation(number, power);
     }
 
     return 0;
 }
 
-double positiveExponentiation(double number, int degree)
+double positiveExponentiation(double number, int power)
 {
     double result = number;
-    degree = abs(degree);
+    power = abs(power);
 
-    while (degree > 1)
-    {
+    while (power > 1) {
         result *= number;
-        degree--;
+        power--;
     }
     
     return result;
 }
 
-double negativeExponentiation(double number, int degree)
+double negativeExponentiation(double number, int power)
 {
-    return 1 / positiveExponentiation(number, degree);
+    return 1 / positiveExponentiation(number, power);
 }
