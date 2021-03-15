@@ -2,33 +2,40 @@
 
 using namespace std;
 
+double calculateFibonacciSomeRawMember(int lastRawMember);
+
 int main()
 {
-    int previousNumber = 0,
-        currentNumber = 1,
-        nextNumber,
-        soughtForMember,
-        pointer = 2;
+    int soughtForMember = 0;
     
-    cout << "Enter an index of row member: ";
+    cout << "Enter an index of last row member: ";
     cin >> soughtForMember;
 
     if ( soughtForMember <= 0 ) {
         cout << "Error! Row member index must be greater than zero.";
         return 1;
-    } else if ( soughtForMember == 1 ) {
-        cout << previousNumber;
-    } else if ( soughtForMember == 2 ) {
-        cout << currentNumber;
     } else {
-        do {
-            nextNumber = currentNumber + previousNumber;
-            previousNumber = currentNumber;
-            currentNumber = nextNumber;
-            pointer++;
-            cout << "The " << pointer << " member is " << currentNumber << endl;
-        } while ( pointer < soughtForMember );
+        cout << "Sought for raw member value is: " << calculateFibonacciSomeRawMember(soughtForMember) << endl;
     }
-    
+
     return 0;
+}
+
+double calculateFibonacciSomeRawMember(int lastRawMember)
+{
+    double prevRawMember = 0, currRawMember = 1, nextRawMember;
+
+    if (lastRawMember == 1) {
+        return prevRawMember;
+    } else if (lastRawMember == 2) {
+        return currRawMember;
+    } else {
+        for (int i = 3; i <= lastRawMember; i++) {
+            nextRawMember = currRawMember + prevRawMember;
+            prevRawMember = currRawMember;
+            currRawMember = nextRawMember;
+        }
+    }
+
+    return currRawMember;
 }
