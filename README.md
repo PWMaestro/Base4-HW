@@ -15,3 +15,4 @@ DevIncubator homeworks
 
 11.03.2021 [Task 8](task-8/) "Степень"  
 11.03.2021 [Task 9](task-9/) "Единицы"  
+11.03.2021 [Task 10](task-10/) "Фибоначчи"  
