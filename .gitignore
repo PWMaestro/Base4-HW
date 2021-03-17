@@ -1,5 +1,6 @@
 # Code editor
 .vscode/
+tempCodeRunnerFile.cpp
 
 # Prerequisites
 *.d
