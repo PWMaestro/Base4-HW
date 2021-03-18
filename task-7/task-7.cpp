@@ -8,8 +8,8 @@ int main()
 {
     int maxValue = 100;
 
-    mt19937 mersenne(static_cast<unsigned int>(time(0)));
-    uniform_int_distribution<> dist(1, maxValue);
+    mt19937 mersenne(static_cast<unsigned int>(time(0))); // random number generator
+    uniform_int_distribution<> dist(1, maxValue); // range of random values
 
     int secretNumber = dist(mersenne),
         inputNumber;
