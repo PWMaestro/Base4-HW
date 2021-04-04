@@ -14,8 +14,7 @@ bool isTransparencyByWidthExist();
 void showTransparencyFoundMessage(string axisDirection);
 void showNoTransparencyMessage();
 
-// creating console object to manipulate with output text
-HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
+HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE); // creating console object to manipulate with output text
 
 int parallelepiped[FIG_WIDTH][FIG_LENGTH][FIG_HEIGHT] = {
     {
@@ -129,14 +128,14 @@ bool isTransparencyByWidthExist()
 
 void showTransparencyFoundMessage(string axisDirection)
 {
-    SetConsoleTextAttribute(console, (WORD) ((0 << 4) | 2));
+    SetConsoleTextAttribute(console, (WORD) ((0 << 4) | 2)); // set green color to output text
     cout << "Hooray! Transparent hole exists " << axisDirection << "!" << endl;
-    SetConsoleTextAttribute(console, (WORD) ((0 << 4) | 7));
+    SetConsoleTextAttribute(console, (WORD) ((0 << 4) | 7)); // set default color to output text
 }
 
 void showNoTransparencyMessage()
 {
-    SetConsoleTextAttribute(console, (WORD) ((0 << 4) | 4));
+    SetConsoleTextAttribute(console, (WORD) ((0 << 4) | 4)); // set red color to output text
     cout << "Whoa! There is no transparent hole in that figure!" << endl;
-    SetConsoleTextAttribute(console, (WORD) ((0 << 4) | 7));
+    SetConsoleTextAttribute(console, (WORD) ((0 << 4) | 7)); // set default color to output text
 }
