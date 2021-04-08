@@ -27,3 +27,4 @@ DevIncubator homeworks
 
 ## 5. Week 6
 01.04.2021 [Task 15](task-15/) "Просвет"  
+01.04.2021 [Task 16](task-16/) "Крестики-нолики"  
