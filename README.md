@@ -1,5 +1,3 @@
-# Base4-HW
-DevIncubator homeworks
 # Base4 - Lections & Homeworks
 DevIncubator lections and homeworks
 
