@@ -31,3 +31,5 @@ DevIncubator lections and homeworks
 
 ## 6. Week 7
 05.04.2021 [Task 18](task-18/) Просто ДЗ  
+
+08.04.2021 [Task 19](task-19-lesson/) Лекция: строки  
