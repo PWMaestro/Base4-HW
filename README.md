@@ -34,6 +34,7 @@ DevIncubator lections and homeworks
 
 ## 7. Week 8
 08.04.2021 [Task 19](task-19-lesson/) Лекция: строки  
+08.04.2021 [Task 20](task-20/) "Плюс-минус"  
 08.04.2021 [Task 21](task-21/) "Поле чудес"  
 08.04.2021 [Task 22](task-22/) "Штирлиц и Мюллер"  
 
