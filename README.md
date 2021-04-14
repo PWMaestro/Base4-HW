@@ -33,3 +33,4 @@ DevIncubator lections and homeworks
 05.04.2021 [Task 18](task-18/) Просто ДЗ  
 
 08.04.2021 [Task 19](task-19-lesson/) Лекция: строки  
+08.04.2021 [Task 21](task-21/) "Поле чудес"
