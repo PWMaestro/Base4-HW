@@ -37,17 +37,13 @@ int main()
         if (isNumeral(string[i]))
         {
             int value = charToInt(string[i]);
-
             replaceNumeralsWithPlusOrMinus(string, i, value);
             i +=value - 1;
         }
     }
     cout << string;
-    
     return 0;
 }
-
-
 
 int charToInt(char character)
 {
